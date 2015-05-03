@@ -1,3 +1,34 @@
-Flask Social Template Macros
+##Flask Social Widgets
 
-Description goes here
+A simple Flask extension to make available functions to Jinja to render some common social media widgets.
+Currently only supports the Facebook like function
+
+###Example:
+
+python```
+from flask import Flask, render
+from flask.ext.social-widgets import Widgets
+
+app = Flask(__name__)
+
+widgets = Widgets()
+widgets.init_app(app)
+
+@app.route("/")
+def index():
+	return render("index.html")
+
+if __name__ == "__main__":
+    app.run()
+```
+
+And in index.html:
+
+html```
+<html>
+<head>
+{{ facebook_button_javascript() }}
+</head>
+{{ facebook_button() }}
+</html>
+```

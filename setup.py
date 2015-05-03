@@ -16,7 +16,7 @@ from setuptools import setup
 
 
 setup(
-    name='Flask Social Template Macros',
+    name='Flask Social Buttons',
     version='0.1',
     url='<enter URL here>',
     license='MIT',
