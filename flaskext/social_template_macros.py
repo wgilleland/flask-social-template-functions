@@ -38,7 +38,7 @@ class SocialButtons(object):
 						u' fjs.parentNode.insertBefore(js, fjs); '
 						u'}}(document, \'script\', \'facebook-jssdk\'));</script> ')
 				text = text.format(app_id=facebook_app_id)
-				return Markup.escape(text)
+				return Markup(text)
 
 			return dict(facebook_button_javascript=f)
 
