@@ -65,6 +65,8 @@ class SocialButtons(object):
 								   fb_faces=facebook_button_show_faces,
 								   fb_share=facebook_button_share)
 				return Markup.escape(text)
+			
+			return dict(facebook_button=f)
 
 	def teardown(self, exception):
 		pass
