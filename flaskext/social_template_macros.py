@@ -30,14 +30,14 @@ class SocialButtons(object):
 			def f():
 				facebook_app_id = app.config.get('FACEBOOK_APP_ID', 123456)
 				text = (u'<div id="fb-root"></div> '
-						u'<script>(function(d, s, id) { '
+						u'<script>(function(d, s, id) {{ '
 						u' var js, fjs = d.getElementsByTagName(s)[0]; '
 						u' if (d.getElementById(id)) return; '
 						u' js = d.createElement(s); js.id = id; '
-						u' js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId='+str(facebook_app_id)+u'"; '
+						u' js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId="{app_id}; '
 						u' fjs.parentNode.insertBefore(js, fjs); '
-						u'}(document, \'script\', \'facebook-jssdk\'));</script> ')
-				# text = text.format(app_id=facebook_app_id)
+						u'}}(document, \'script\', \'facebook-jssdk\'));</script> ')
+				text = text.format(app_id=facebook_app_id)
 				return Markup.escape(text)
 
 			return dict(facebook_button_javascript=f)
