@@ -30,3 +30,5 @@ And in index.html:
 		{{ facebook_button() }}
 	</body>
 </html>
+
+To install: pip install git+https://github.com/wgilleland/flask-social-template-functions
