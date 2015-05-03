@@ -37,7 +37,7 @@ class SocialButtons(object):
 						u' js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId={app_id}"; '
 						u' fjs.parentNode.insertBefore(js, fjs); '
 						u'}(document, \'script\', \'facebook-jssdk\'));</script> ')
-				text = text.format(app_id=facebook_app_id)
+				# text = text.format(app_id=facebook_app_id)
 				return Markup.escape(text)
 
 			return dict(facebook_button_javascript=f)
@@ -65,7 +65,7 @@ class SocialButtons(object):
 								   fb_faces=facebook_button_show_faces,
 								   fb_share=facebook_button_share)
 				return Markup.escape(text)
-			
+
 			return dict(facebook_button=f)
 
 	def teardown(self, exception):
