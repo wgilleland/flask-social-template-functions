@@ -5,7 +5,6 @@ Currently only supports the Facebook like function
 
 ###Example:
 
-python```
 from flask import Flask, render
 from flask.ext.social-widgets import Widgets
 
@@ -20,15 +19,14 @@ def index():
 
 if __name__ == "__main__":
     app.run()
-```
 
 And in index.html:
 
-html```
 <html>
-<head>
-{{ facebook_button_javascript() }}
-</head>
-{{ facebook_button() }}
+	<head>
+		{{ facebook_button_javascript() }}
+	</head>
+	<body>
+		{{ facebook_button() }}
+	</body>
 </html>
-```
